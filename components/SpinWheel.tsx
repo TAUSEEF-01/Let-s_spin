@@ -69,53 +69,53 @@ const SpinWheel = () => {
     return Math.round(Math.atan2(matrix.b, matrix.a) * (180 / Math.PI));
   };
 
-  const shareScreenshot = async () => {
-    const canvas = await html2canvas(wheelRef.current);
-    const image = canvas.toDataURL("image/png");
+  //   const shareScreenshot = async () => {
+  //     const canvas = await html2canvas(wheelRef.current);
+  //     const image = canvas.toDataURL("image/png");
 
-    // Create a blob from the image data
-    const blob = await (await fetch(image)).blob();
-    const imageFile = new File([blob], "spin-result.png", {
-      type: "image/png",
-    });
+  //     // Create a blob from the image data
+  //     const blob = await (await fetch(image)).blob();
+  //     const imageFile = new File([blob], "spin-result.png", {
+  //       type: "image/png",
+  //     });
 
-    if (
-      navigator.share &&
-      navigator.canShare &&
-      navigator.canShare({ files: [imageFile] })
-    ) {
-      try {
-        await navigator.share({
-          title: "My Spin Result",
-          text: "Check out my spin result!",
-          files: [imageFile],
-        });
-      } catch (err) {
-        console.error("Error sharing:", err);
-        fallbackShare(image);
-      }
-    } else {
-      fallbackShare(image);
-    }
-  };
+  //     if (
+  //       navigator.share &&
+  //       navigator.canShare &&
+  //       navigator.canShare({ files: [imageFile] })
+  //     ) {
+  //       try {
+  //         await navigator.share({
+  //           title: "My Spin Result",
+  //           text: "Check out my spin result!",
+  //           files: [imageFile],
+  //         });
+  //       } catch (err) {
+  //         console.error("Error sharing:", err);
+  //         fallbackShare(image);
+  //       }
+  //     } else {
+  //       fallbackShare(image);
+  //     }
+  //   };
 
-  const fallbackShare = (imageUrl: string) => {
-    const shareUrl = encodeURIComponent(window.location.href);
-    const shareText = encodeURIComponent("Check out my spin result!");
+  //   const fallbackShare = (imageUrl: string) => {
+  //     const shareUrl = encodeURIComponent(window.location.href);
+  //     const shareText = encodeURIComponent("Check out my spin result!");
 
-    const socialButtons = document.createElement("div");
-    socialButtons.innerHTML = `
-      <div style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:white;padding:20px;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,0.3);z-index:1000;">
-        <h3>Share via:</h3>
-        <div style="display:flex;gap:10px;margin-top:10px;">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=${shareUrl}" target="_blank">Facebook</a>
-          <a href="https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}" target="_blank">Twitter</a>
-          <button onclick="this.parentElement.parentElement.remove()">Close</button>
-        </div>
-      </div>
-    `;
-    document.body.appendChild(socialButtons);
-  };
+  //     const socialButtons = document.createElement("div");
+  //     socialButtons.innerHTML = `
+  //       <div style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:white;padding:20px;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,0.3);z-index:1000;">
+  //         <h3>Share via:</h3>
+  //         <div style="display:flex;gap:10px;margin-top:10px;">
+  //           <a href="https://www.facebook.com/sharer/sharer.php?u=${shareUrl}" target="_blank">Facebook</a>
+  //           <a href="https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}" target="_blank">Twitter</a>
+  //           <button onclick="this.parentElement.parentElement.remove()">Close</button>
+  //         </div>
+  //       </div>
+  //     `;
+  //     document.body.appendChild(socialButtons);
+  //   };
 
   const closeModal = () => {
     setShowModal(false);
@@ -148,7 +148,7 @@ const SpinWheel = () => {
       <button onClick={spin} disabled={spinning}>
         {spinning ? "Spinning..." : "SPIN!"}
       </button>
-      <button onClick={shareScreenshot}>Share Result</button>
+      {/* <button onClick={shareScreenshot}>Share Result</button> */}
 
       {showModal && (
         <div className={styles.modal}>
