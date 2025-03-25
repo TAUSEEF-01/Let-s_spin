@@ -131,12 +131,13 @@ const SpinWheel = () => {
             className={styles.segment}
             style={{
               transform: `rotate(${index * (360 / options.length)}deg)`,
-              clipPath: `polygon(100% 100%, 100% 0, 0 0, 0 100%)`,
             }}
           >
             <span
               style={{
-                transform: `rotate(${360 / options.length / 2}deg)`,
+                transform: `translate(-50%, 0) rotate(${
+                  index * (360 / options.length) * -1 - 90
+                }deg)`,
               }}
             >
               {option}
