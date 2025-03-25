@@ -373,7 +373,24 @@ const SpinWheel = () => {
     <div className={styles.wheelContainer}>
       <div className={styles.stand}></div>
       <div ref={wheelRef} className={styles.wheel}>
-        {options.map((option, index) => (
+      {options.map((option, index) => (
+  <div
+    key={option}
+    className={styles.segment}
+    style={{
+      transform: `rotate(${index * (360 / options.length)}deg)`,
+    }}
+  >
+    <span
+      style={{
+        transform: `rotate(${-(360 / options.length) * index - 90}deg)`,
+      }}
+    >
+      {index + 1}
+    </span>
+  </div>
+))}
+        {/* {options.map((option, index) => (
           <div
             key={option}
             className={styles.segment}
@@ -384,14 +401,14 @@ const SpinWheel = () => {
             <span
               style={{
                 transform: `rotate(${
-                  -(index * (360 / options.length)) - 90
+                  -((360 / options.length)) - 130
                 }deg)`,
               }}
             >
               {index + 1}
             </span>
           </div>
-        ))}
+        ))} */}
       </div>
       <button onClick={spin} disabled={spinning}>
         {spinning ? "Spinning..." : "SPIN!"}
