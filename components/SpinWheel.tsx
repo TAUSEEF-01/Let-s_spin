@@ -304,9 +304,10 @@ const SpinWheel = () => {
   const [showModal, setShowModal] = useState(false);
   const wheelRef = useRef(null);
   const options = [
+    "Give you Eidi (1000 TK) 💰",
     "Buy you a dress 👗",
     "Buy you a pair of shoes 👞👠",
-    "Give you Eidi (1000 TK) 💰",
+    
     "Give you Eidi (10 TK) 💰",
     "Take you out for an Eid dinner 🍽️",
     "Gift you a fragrance/perfume 🌸🧴",
