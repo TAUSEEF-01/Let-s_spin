@@ -2,6 +2,7 @@ import SpinWheel from "../components/SpinWheel";
 import styles from "../styles/Home.module.css";
 import React, { useEffect } from "react";
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Home() {
   useEffect(() => {
@@ -32,29 +33,19 @@ export default function Home() {
         <h1>Eid Celebration Spinner</h1>
         <h2 className={styles.subtitle}>Your Surprise Awaits! 🎉🎡</h2>
         <SpinWheel />
-        
-        {/* <div className={styles.counter}>
-          <a
-            href="https://www.free-counters.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            powered by Free-Counters.org
-          </a>
-        </div> */}
-      </main>
-      <div className={styles.visitorCounter}>
+        <Link href="/about" className={styles.aboutLink}>
+          About Me
+        </Link>
+        <div className={styles.visitorCounter}>
           <div
             dangerouslySetInnerHTML={{
               __html: `
-                
                 <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1319725/t/7"></script>
               `,
             }}
           />
         </div>
+      </main>
     </div>
   );
 }
-
-//<script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=65f1f1b26ab9a0d76a5a32e806187b58ffc13cda'></script>

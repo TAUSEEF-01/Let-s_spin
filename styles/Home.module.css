@@ -93,6 +93,18 @@
   animation: slideUp 1.5s ease-in-out;
 }
 
+.aboutLink {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: #ff4e50;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.aboutLink:hover {
+  color: #e64447;
+}
+
 @keyframes moveBackground {
   0% {
     transform: translate(0, 0);
