@@ -55,6 +55,7 @@ export default function Home() {
         </Link>
         <div className={styles.visitorCounter}>
           <div
+          
             dangerouslySetInnerHTML={{
               __html: `
                 <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1319725/t/7"></script>
