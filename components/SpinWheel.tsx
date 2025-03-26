@@ -303,19 +303,25 @@ const SpinWheel = () => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const wheelRef = useRef(null);
-  const options = [
+  const [options, setOptions] = useState([
     "Give you Eidi (1000 TK) 💰",
-    "Buy you a dress 👗",
+    "Buy you a dress 👗", 
     "Buy you a pair of shoes 👞👠",
-    
     "Give you Eidi (10 TK) 💰",
     "Take you out for an Eid dinner 🍽️",
-    "Gift you a fragrance/perfume 🌸🧴",
+    "Gift you a fragrance/perfume 🌸🧴", 
     "Give you Eidi (10000 TK) 💰",
     "Get you a box of sweets 🍬🧁",
     "Cook your favorite Eid dish 🍛",
     "Plan a fun Eid day out 🎡🚗",
-  ];
+  ]);
+
+  useEffect(() => {
+    if (spinning) {
+      const shuffled = [...options].sort(() => Math.random() - 0.5);
+      setOptions(shuffled);
+    }
+  }, [spinning]);
 
   // Add initial random rotation on mount
   useEffect(() => {
