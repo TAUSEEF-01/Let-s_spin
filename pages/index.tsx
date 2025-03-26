@@ -53,7 +53,7 @@ export default function Home() {
         <Link href="/about" className={styles.aboutLink}>
           About Me
         </Link>
-        {/* <div className={styles.visitorCounter}>
+        <div className={styles.visitorCounter}>
           <div
 
             dangerouslySetInnerHTML={{
@@ -62,7 +62,7 @@ export default function Home() {
               `,
             }}
           />
-        </div> */}
+        </div>
       </main>
     </div>
   );
