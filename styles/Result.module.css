@@ -3,13 +3,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f5f5f5;
+  background: url("/images/eid-celebration.jpg") no-repeat center center/cover;
   padding: 20px;
   animation: fadeIn 1.5s ease-in-out;
 }
 
 .result {
-  background: white;
+  background: rgba(255, 255, 255, 0.9);
   padding: 40px;
   border-radius: 16px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

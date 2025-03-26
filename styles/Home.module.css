@@ -1,6 +1,5 @@
 .container {
   min-height: 100vh;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,20 +12,13 @@
 .container::before {
   content: "";
   position: absolute;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.1) 25%,
-    transparent 25%,
-    transparent 50%,
-    rgba(255, 255, 255, 0.1) 50%,
-    rgba(255, 255, 255, 0.1) 75%,
-    transparent 75%
-  );
-  background-size: 60px 60px;
-  animation: moveBackground 30s linear infinite;
-  opacity: 0.5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/images/eid-background.jpg") no-repeat center center/cover;
+  opacity: 0.2;
+  z-index: -1;
 }
 
 .main {

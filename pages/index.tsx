@@ -32,16 +32,7 @@ export default function Home() {
         <h1>Eid Celebration Spinner</h1>
         <h2 className={styles.subtitle}>Your Surprise Awaits! 🎉🎡</h2>
         <SpinWheel />
-        <div className={styles.visitorCounter}>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `
-                <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=65f1f1b26ab9a0d76a5a32e806187b58ffc13cda'></script>
-                <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1319725/t/7"></script>
-              `,
-            }}
-          />
-        </div>
+        
         {/* <div className={styles.counter}>
           <a
             href="https://www.free-counters.org/"
@@ -52,6 +43,16 @@ export default function Home() {
           </a>
         </div> */}
       </main>
+      <div className={styles.visitorCounter}>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `
+                <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=65f1f1b26ab9a0d76a5a32e806187b58ffc13cda'></script>
+                <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1319725/t/7"></script>
+              `,
+            }}
+          />
+        </div>
     </div>
   );
 }

@@ -2,13 +2,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   position: relative;
+  background: url("/images/shopping-bags.png") no-repeat bottom right/20%;
+  gap: 20px;
 }
 
 .wheel {
-  width: 500px;
-  height: 500px;
+  width: 80vmin;
+  height: 80vmin;
   border-radius: 50%;
   position: relative;
   border: 15px solid #333;
@@ -68,7 +72,7 @@
   border-right: 20px solid transparent;
   border-top: 40px solid #333;
   position: absolute;
-  top: 0;
+  top: -20px;
   z-index: 10;
 }
 
