@@ -47,7 +47,7 @@ export default function Home() {
           <div
             dangerouslySetInnerHTML={{
               __html: `
-                <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=65f1f1b26ab9a0d76a5a32e806187b58ffc13cda'></script>
+                
                 <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1319725/t/7"></script>
               `,
             }}
@@ -56,3 +56,5 @@ export default function Home() {
     </div>
   );
 }
+
+//<script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=65f1f1b26ab9a0d76a5a32e806187b58ffc13cda'></script>
