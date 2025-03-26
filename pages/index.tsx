@@ -3,8 +3,25 @@ import styles from "../styles/Home.module.css";
 import React, { useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      if (url === "/") {
+        window.location.reload(); // Reload the page when returning to the home page
+      }
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
   useEffect(() => {
     // Load counter scripts dynamically
     const script1 = document.createElement("script");
