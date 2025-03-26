@@ -28,7 +28,7 @@ export default function Home() {
       <Head>
         <title>Eid Celebration Spinner – Your Surprise Awaits! 🎉🎡</title>
       </Head>
-      <main className={styles.main}>
+      <main className={`${styles.main} animate__animated animate__fadeIn`}>
         <h1>Eid Celebration Spinner</h1>
         <h2 className={styles.subtitle}>Your Surprise Awaits! 🎉🎡</h2>
         <SpinWheel />

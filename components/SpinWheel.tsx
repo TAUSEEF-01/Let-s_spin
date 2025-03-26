@@ -383,7 +383,7 @@ const SpinWheel = () => {
   >
     <span
       style={{
-        transform: `rotate(${-(360 / options.length) * index - 90}deg)`,
+        transform: `rotate(${-(360 / options.length) - 90}deg)`,
       }}
     >
       {index + 1}

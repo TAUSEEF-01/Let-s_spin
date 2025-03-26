@@ -65,8 +65,11 @@ export default function Result() {
   }
 
   return (
-    <div className={styles.container}>
-      <div ref={resultRef} className={styles.result}>
+    <div className={`${styles.container} animate__animated animate__fadeIn`}>
+      <div
+        ref={resultRef}
+        className={`${styles.result} animate__animated animate__zoomIn`}
+      >
         <h1>Your Eid Surprise!</h1>
         <div className={styles.gift}>{decodeURIComponent(id as string)}</div>
       </div>
